@@ -13,7 +13,7 @@ class CreateSupervisors < ActiveRecord::Migration
       t.text :bio
       t.string :facebook
       t.string :twitter
-      t.belongs_to :district
+      t.references :district, index: true, foreign_key: true
 
       t.timestamps null: false
     end
