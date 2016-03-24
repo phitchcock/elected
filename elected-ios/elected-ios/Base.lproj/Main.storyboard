@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Landing View Controller-->
+        <!--Sacramento-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LandingViewController" customModule="elected_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,16 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-6X-JRP">
-                                <rect key="frame" x="164" y="81" width="46" height="30"/>
+                                <rect key="frame" x="164" y="362" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="dGH-Ap-RcV" kind="show" id="THs-AG-0OL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elected Officials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-fY-mqq">
+                                <rect key="frame" x="59" y="313" width="256" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="vV5-kF-T2h">
+                                <rect key="frame" x="67" y="182" width="240" height="99"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.19607843137254902" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DIi-kH-kCF"/>
+                    <navigationItem key="navigationItem" title="Sacramento" id="DIi-kH-kCF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -207,6 +216,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ro2-Uf-RMv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.050980392159999999" green="0.1960784314" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -221,6 +234,10 @@
         <scene sceneID="dNH-3p-re4">
             <objects>
                 <viewController id="wCT-WA-mjL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p8j-bH-FNi"/>
+                        <viewControllerLayoutGuide type="bottom" id="C6T-0u-e05"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rhM-j5-Noj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,6 +260,10 @@
         <scene sceneID="IuM-vn-hQn">
             <objects>
                 <viewController id="Pjd-jo-VFe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hJV-sC-rjQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EqE-RC-Gw0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hlu-Ym-I9C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +271,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-8Y-EmI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1654"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">About Supervisor Phil Serna
+                                <string key="text">About Supervisor Phil Serna
 Voters elected Phil Serna to serve on the Sacramento County Board Supervisors in June 2010.
 
 Phil, 45, grew up in Sacramento’s Curtis Park neighborhood and attended local schools.  The son of Sacramento’s first Latino mayor, Joe Serna, Jr., Phil developed an appreciation for public service at a very young age.  His respect for his family’s humble beginnings and their efforts working with Cesar Chavez to secure rights for farm workers also shaped Phil’s desire to serve.
@@ -296,7 +317,7 @@ Stockton Boulevard Partnership
 Sacramento Area Flood Control Agency 
 Tobacco Securitization Corporation
 California Air Resources Board
-Firefighters Burn Institute Advisory Board</mutableString>
+Firefighters Burn Institute Advisory Board</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -312,6 +333,10 @@ Firefighters Burn Institute Advisory Board</mutableString>
         <scene sceneID="o4v-wW-U0y">
             <objects>
                 <viewController id="Li9-AC-E3n" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ddK-sP-skX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BPA-Ud-V7p"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iqn-CY-0zI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,6 +357,7 @@ Firefighters Burn Institute Advisory Board</mutableString>
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="260" height="64"/>
         <image name="phil" width="270" height="300"/>
     </resources>
 </document>
