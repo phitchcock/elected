@@ -1,3 +1,3 @@
 class City < ActiveRecord::Base
-  belongs_to :district
+  has_many :officials
 end

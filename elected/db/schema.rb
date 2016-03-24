@@ -11,41 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315031208) do
+ActiveRecord::Schema.define(version: 20160324215438) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
-    t.integer  "district_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "cities", ["district_id"], name: "index_cities_on_district_id"
-
-  create_table "districts", force: :cascade do |t|
+  create_table "officials", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "supervisors", force: :cascade do |t|
-    t.string   "name"
-    t.string   "street"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.string   "email"
-    t.string   "phone"
-    t.string   "fax"
     t.string   "image"
-    t.text     "bio"
-    t.string   "facebook"
-    t.string   "twitter"
-    t.integer  "district_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "city_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "supervisors", ["district_id"], name: "index_supervisors_on_district_id"
+  add_index "officials", ["city_id"], name: "index_officials_on_city_id"
 
 end

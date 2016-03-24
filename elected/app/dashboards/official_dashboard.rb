@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class DistrictDashboard < Administrate::BaseDashboard
+class OfficialDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,10 +8,10 @@ class DistrictDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    supervisors: Field::HasMany,
-    cities: Field::HasMany,
+    city: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
+    image: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -22,19 +22,19 @@ class DistrictDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :supervisors,
-    :cities,
+    :city,
     :id,
     :name,
+    :image,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :supervisors,
-    :cities,
+    :city,
     :id,
     :name,
+    :image,
     :created_at,
     :updated_at,
   ]
@@ -43,13 +43,15 @@ class DistrictDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :city,
     :name,
+    :image,
   ]
 
-  # Overwrite this method to customize how districts are displayed
+  # Overwrite this method to customize how officials are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(district)
-  #   "District ##{district.id}"
+  # def display_resource(official)
+  #   "Official ##{official.id}"
   # end
 end

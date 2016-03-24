@@ -173,11 +173,13 @@
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ckq-X3-iME">
                                 <rect key="frame" x="0.0" y="376" width="375" height="29"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.75294117650000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="Contact"/>
                                     <segment title="Bio"/>
                                     <segment title="People"/>
                                 </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="indexChanged:" destination="5W8-8m-sZj" eventType="valueChanged" id="iq6-if-cFH"/>
                                 </connections>

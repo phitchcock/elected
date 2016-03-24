@@ -1,21 +1,18 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :cities
+    resources :officials
+
+    root to: "cities#index"
+  end
+
   namespace :api, defaults: {format: "json"} do
     namespace :v1 do
-      resources :districts, only: [:index]
-      resources :supervisors, only: [:index]
+      resources :officials, only: [:index]
       resources :cities, only: [:index]
     end
   end
 
-  
-
-  namespace :admin do
-    resources :cities
-    resources :districts
-    resources :supervisors
-
-    root to: "cities#index"
-  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
