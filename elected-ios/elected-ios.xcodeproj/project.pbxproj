@@ -55,7 +55,7 @@
 		9DD33FEE1C97C349006FAF4C /* elected-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "elected-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD33FF21C97C349006FAF4C /* elected_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elected_iosUITests.swift; sourceTree = "<group>"; };
 		9DD33FF41C97C349006FAF4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DD340001C97C35B006FAF4C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		9DD340001C97C35B006FAF4C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EE1AFBD9DAEB2C0B6340CCD /* Pods-elected-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elected-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-elected-ios/Pods-elected-ios.release.xcconfig"; sourceTree = "<group>"; };
 		D047BA471CA485090029550F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D047BA491CA4857A0029550F /* MembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
