@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class CitiesTableViewController: UITableViewController {
 
@@ -18,6 +19,11 @@ class CitiesTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        getLocations()
     }
 
     // MARK: - Table view data source
@@ -32,4 +38,37 @@ class CitiesTableViewController: UITableViewController {
         return cell
     }
 
+    func getLocations() {
+
+        Alamofire.request(.GET, "https://sac-elected.herokuapp.com/api/v1/cities")
+            .responseJSON { response in
+
+                if let JSON = response.result.value {
+                    self.cities.removeAll()
+
+                    let dict = JSON
+
+                    let ar = dict["cities"] as! [AnyObject]
+
+                    for a in ar {
+
+                        // TODO: Potential crash if streetnumber != a numerical string need to check
+                        var name: String
+
+                        if let nameJson = a["name"] {
+                            name = nameJson as! String
+                        } else {
+                            name = "ERROR"
+                        }
+
+                        let city = City(name: name)
+                        
+                        self.cities.append(city)
+                        
+                    }
+                    self.tableView.reloadData()
+                }
+        }
+        
+    }
 }
