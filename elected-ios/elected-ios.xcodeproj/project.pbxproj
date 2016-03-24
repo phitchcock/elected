@@ -16,6 +16,10 @@
 		9DD33FE81C97C349006FAF4C /* elected_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD33FE71C97C349006FAF4C /* elected_iosTests.swift */; };
 		9DD33FF31C97C349006FAF4C /* elected_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD33FF21C97C349006FAF4C /* elected_iosUITests.swift */; };
 		9DD340011C97C35B006FAF4C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9DD340001C97C35B006FAF4C /* Podfile */; };
+		D047BA481CA485090029550F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA471CA485090029550F /* ProfileViewController.swift */; };
+		D047BA4A1CA4857A0029550F /* MembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA491CA4857A0029550F /* MembersTableViewController.swift */; };
+		D047BA4C1CA485920029550F /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA4B1CA485920029550F /* CitiesTableViewController.swift */; };
+		D047BA4E1CA485A70029550F /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA4D1CA485A70029550F /* LandingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		9DD33FF41C97C349006FAF4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DD340001C97C35B006FAF4C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		9EE1AFBD9DAEB2C0B6340CCD /* Pods-elected-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elected-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-elected-ios/Pods-elected-ios.release.xcconfig"; sourceTree = "<group>"; };
+		D047BA471CA485090029550F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D047BA491CA4857A0029550F /* MembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
+		D047BA4B1CA485920029550F /* CitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
+		D047BA4D1CA485A70029550F /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		D2325D548E05BBC126018473 /* Pods_elected_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elected_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56D58190B27EA6CE3B0BF33 /* Pods-elected-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elected-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elected-ios/Pods-elected-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +127,10 @@
 				9DD33FD21C97C349006FAF4C /* AppDelegate.swift */,
 				9DD33FD41C97C349006FAF4C /* ViewController.swift */,
 				9DD33FD61C97C349006FAF4C /* Main.storyboard */,
+				D047BA4D1CA485A70029550F /* LandingViewController.swift */,
+				D047BA4B1CA485920029550F /* CitiesTableViewController.swift */,
+				D047BA491CA4857A0029550F /* MembersTableViewController.swift */,
+				D047BA471CA485090029550F /* ProfileViewController.swift */,
 				9DD33FD91C97C349006FAF4C /* Assets.xcassets */,
 				9DD33FDB1C97C349006FAF4C /* LaunchScreen.storyboard */,
 				9DD33FDE1C97C349006FAF4C /* Info.plist */,
@@ -335,7 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D047BA481CA485090029550F /* ProfileViewController.swift in Sources */,
+				D047BA4C1CA485920029550F /* CitiesTableViewController.swift in Sources */,
 				9DD33FD51C97C349006FAF4C /* ViewController.swift in Sources */,
+				D047BA4A1CA4857A0029550F /* MembersTableViewController.swift in Sources */,
+				D047BA4E1CA485A70029550F /* LandingViewController.swift in Sources */,
 				9DD33FD31C97C349006FAF4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
