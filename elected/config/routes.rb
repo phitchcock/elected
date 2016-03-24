@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: "json"} do
     namespace :v1 do
       resources :officials, only: [:index]
-      resources :cities, only: [:index]
+      resources :cities, only: [:index, :show]
     end
   end
 
