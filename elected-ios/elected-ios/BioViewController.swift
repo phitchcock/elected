@@ -18,7 +18,7 @@ class BioViewController: UIViewController {
         super.viewDidLoad()
 
         if let official = official {
-            print(official.name)
+            textView.text = official.bio
         }
     }
 

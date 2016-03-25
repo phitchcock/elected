@@ -268,17 +268,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-cp-oda">
-                                <rect key="frame" x="20" y="20" width="337" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrE-iB-qCC">
                                 <rect key="frame" x="94" y="190" width="50" height="50"/>
                                 <state key="normal" image="phone"/>
                                 <connections>
                                     <action selector="callButtonPressed:" destination="wCT-WA-mjL" eventType="touchUpInside" id="dNU-Ef-DYA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-J0-YbY">
+                                <rect key="frame" x="162" y="190" width="50" height="50"/>
+                                <state key="normal" image="message"/>
+                                <connections>
+                                    <action selector="emailButtonPressed:" destination="wCT-WA-mjL" eventType="touchUpInside" id="GoT-ux-vkf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-aK-o4F">
@@ -288,28 +289,46 @@
                                     <action selector="facebookButtonPressed:" destination="wCT-WA-mjL" eventType="touchUpInside" id="SKn-TV-4oV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-cp-oda">
+                                <rect key="frame" x="19" y="51" width="337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kb-gO-mKO">
-                                <rect key="frame" x="20" y="49" width="335" height="21"/>
+                                <rect key="frame" x="19" y="80" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19M-HB-w1W">
-                                <rect key="frame" x="20" y="78" width="335" height="21"/>
+                                <rect key="frame" x="19" y="109" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-J0-YbY">
-                                <rect key="frame" x="162" y="190" width="50" height="50"/>
-                                <state key="normal" image="message"/>
-                                <connections>
-                                    <action selector="emailButtonPressed:" destination="wCT-WA-mjL" eventType="touchUpInside" id="GoT-ux-vkf"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pE9-hP-wD7">
+                                <rect key="frame" x="19" y="138" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Street" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFv-Lq-9SZ">
+                                <rect key="frame" x="20" y="22" width="334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="1YQ-cp-oda" id="2Ed-ch-zOl"/>
+                        <outlet property="emailLabel" destination="pE9-hP-wD7" id="alc-Fh-oiF"/>
+                        <outlet property="faxLabel" destination="19M-HB-w1W" id="gVc-oe-hVO"/>
+                        <outlet property="phoneLabel" destination="4Kb-gO-mKO" id="oSw-AO-DWU"/>
+                        <outlet property="streetLabel" destination="bFv-Lq-9SZ" id="uWK-Ly-gA7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sK-Xa-FEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -327,58 +346,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-8Y-EmI">
-                                <rect key="frame" x="0.0" y="8" width="375" height="244"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-J6-veG">
+                                <rect key="frame" x="20" y="8" width="335" height="244"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">About Supervisor Phil Serna
-Voters elected Phil Serna to serve on the Sacramento County Board Supervisors in June 2010.
-
-Phil, 45, grew up in Sacramento’s Curtis Park neighborhood and attended local schools.  The son of Sacramento’s first Latino mayor, Joe Serna, Jr., Phil developed an appreciation for public service at a very young age.  His respect for his family’s humble beginnings and their efforts working with Cesar Chavez to secure rights for farm workers also shaped Phil’s desire to serve.
-
-services.  These include health and social services such as mental and indigent health care, as well as protective services for children and the elderly.  Phil is also focused on public safety and enhancing the environment.  He routinely works to secure the flood protection residents deserve, and to protect and improve the American River Parkway.  Advancing these and other priorities take resources and that’s why during a very difficult economy Supervisor Serna is working to ensure the County is run efficiently and effectively, and that we actively retain and attract new businesses and jobs.
-
-In what little spare time Phil has, he enjoys fly fishing and playing bass guitar and drums with his bands.
-
-Current Boards and Committees:
- 
-Area 4 Agency on Aging 
-Sacramento Area Sewer District
-CSAC Urban Counties Caucus
-Sacramento County Mental Health Board
-Criminal Justice Cabinet
-Sacramento County Water Agency
-Downtown Sacramento Partnership
-Sacramento Metro Air Quality Management District
-First Five Sacramento Commission
-Sacramento Metro Cable TV Commission
-Midtown Business Association
-Sacramento Public Library Authority 
-National Association of Counties
-Sacto. Regional Arts Facilities Financing Authority
-North Franklin District Business Association
-Sacramento Regional County Sanitation District
-Oak Park Business Association
-Sacramento Regional Solid Waste Authority 
-Policy Board to End Homelessness
-Sacramento Regional Transit District
-Regional Human Rights/Fair Housing Commission
-Sacramento Transportation Authority 
-River City Regional Stadium Financing Authority
-Sacramento Abandoned Vehicle Service Authority
-Sacramento Area Council of Governments
-Stockton Boulevard Partnership
-Sacramento Area Flood Control Agency 
-Tobacco Securitization Corporation
-California Air Resources Board
-Firefighters Burn Institute Advisory Board</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="pD6-8Y-EmI" id="gIp-HE-oYa"/>
+                        <outlet property="textView" destination="9Tf-J6-veG" id="LAL-jw-JDJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-98-qoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,16 +379,9 @@ Firefighters Burn Institute Advisory Board</mutableString>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-oc-7UA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Staff Member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Nl-DF-5cy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="kWd-gz-WXk" style="IBUITableViewCellStyleDefault" id="ZVJ-ka-03P">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZVJ-ka-03P" id="p5X-8s-lMf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>

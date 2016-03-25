@@ -59,10 +59,18 @@ class MembersTableViewController: UITableViewController {
 
                     for a in ar {
 
-                        // TODO: Potential crash if streetnumber != a numerical string need to check
                         var name: String
                         var image: String
                         var cityId: Int
+                        var bio: String
+                        var street: String
+                        var cityCode: String
+                        var state: String
+                        var zip: String
+                        var phone: String
+                        var email: String
+                        var fb: String?
+                        var fax: String
 
                         if let nameJson = a["name"] {
                             name = nameJson as! String
@@ -82,7 +90,65 @@ class MembersTableViewController: UITableViewController {
                             cityId = 0
                         }
 
-                        let official = Official(name: name, image: image, cityId: cityId)
+                        if let bioJson = a["bio"] {
+                            bio = bioJson as! String
+                        } else {
+                            bio = "ERROR"
+                        }
+
+                        if let streetJson = a["street"] {
+                            street = streetJson as! String
+                        } else {
+                            street = "ERROR"
+                        }
+
+                        if let cityJson = a["city_code"] {
+                            cityCode = cityJson as! String
+                        } else {
+                            cityCode = "ERROR"
+                        }
+
+                        if let stateJson = a["state"] {
+                            state = stateJson as! String
+                        } else {
+                            state = "ERROR"
+                        }
+
+                        if let zipJson = a["zip"] {
+                            zip = zipJson as! String
+                        } else {
+                            zip = "ERROR"
+                        }
+
+                        if let phoneJson = a["phone"] {
+                            phone = phoneJson as! String
+                        } else {
+                            phone = "ERROR"
+                        }
+
+                        if let emailJson = a["email"] {
+                            email = emailJson as! String
+                        } else {
+                            email = "ERROR"
+                        }
+
+                        if let faxJson = a["fax"] {
+                            fax = faxJson as! String
+                        } else {
+                            fax = "ERROR"
+                        }
+
+                        if let fbJson = a["facebook"] {
+                            fb = fbJson as? String
+                        } else {
+                            fb = nil
+                        }
+
+                        let official = Official(name: name, image: image, cityId: cityId, bio: bio, street: street, cityCode: cityCode, state: state, zip: zip, phone: phone, email: email, fax: fax)
+
+                        if fb != nil {
+                            official.fb = fb
+                        }
 
                         self.officials.append(official)
                         
