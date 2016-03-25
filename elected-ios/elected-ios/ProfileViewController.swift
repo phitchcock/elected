@@ -72,4 +72,19 @@ class ProfileViewController: UIViewController {
         }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "contactSegue" {
+            let dvc = segue.destinationViewController as! ContactViewController
+            dvc.official = official
+        }
+        if segue.identifier == "staffSegue" {
+            let dvc = segue.destinationViewController as! TeamViewController
+            dvc.official = official
+        }
+        if segue.identifier == "bioSegue" {
+            let dvc = segue.destinationViewController as! BioViewController
+            dvc.official = official
+        }
+    }
+
 }

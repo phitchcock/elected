@@ -27,6 +27,8 @@
 		D047BA581CA596AF0029550F /* OfficialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA571CA596AF0029550F /* OfficialTableViewCell.swift */; };
 		D047BA5C1CA5A7070029550F /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA5B1CA5A7070029550F /* TeamViewController.swift */; };
 		D047BA5E1CA5B3040029550F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA5D1CA5B3040029550F /* WebViewController.swift */; };
+		D047BA601CA5C0BC0029550F /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA5F1CA5C0BC0029550F /* ContactViewController.swift */; };
+		D047BA621CA5C2840029550F /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA611CA5C2840029550F /* BioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		D047BA571CA596AF0029550F /* OfficialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficialTableViewCell.swift; sourceTree = "<group>"; };
 		D047BA5B1CA5A7070029550F /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		D047BA5D1CA5B3040029550F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D047BA5F1CA5C0BC0029550F /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		D047BA611CA5C2840029550F /* BioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		D2325D548E05BBC126018473 /* Pods_elected_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_elected_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56D58190B27EA6CE3B0BF33 /* Pods-elected-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-elected-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-elected-ios/Pods-elected-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +145,8 @@
 				9DD33FD21C97C349006FAF4C /* AppDelegate.swift */,
 				9DD33FD41C97C349006FAF4C /* ViewController.swift */,
 				9DD33FD61C97C349006FAF4C /* Main.storyboard */,
+				D047BA611CA5C2840029550F /* BioViewController.swift */,
+				D047BA5F1CA5C0BC0029550F /* ContactViewController.swift */,
 				D047BA5D1CA5B3040029550F /* WebViewController.swift */,
 				D047BA5B1CA5A7070029550F /* TeamViewController.swift */,
 				D047BA571CA596AF0029550F /* OfficialTableViewCell.swift */,
@@ -369,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D047BA481CA485090029550F /* ProfileViewController.swift in Sources */,
+				D047BA601CA5C0BC0029550F /* ContactViewController.swift in Sources */,
 				D047BA5C1CA5A7070029550F /* TeamViewController.swift in Sources */,
 				D047BA581CA596AF0029550F /* OfficialTableViewCell.swift in Sources */,
 				D047BA4C1CA485920029550F /* CitiesTableViewController.swift in Sources */,
@@ -381,6 +388,7 @@
 				D047BA521CA49DFD0029550F /* Official.swift in Sources */,
 				D047BA5E1CA5B3040029550F /* WebViewController.swift in Sources */,
 				D047BA501CA49DAC0029550F /* City.swift in Sources */,
+				D047BA621CA5C2840029550F /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

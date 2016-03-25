@@ -10,10 +10,15 @@ import UIKit
 
 class TeamViewController: UIViewController {
 
+    var official: Official?
     var members = ["one", "two"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let official = official {
+            print(official.name)
+        }
     }
 
     override func didReceiveMemoryWarning() {
