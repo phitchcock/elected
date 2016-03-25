@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class OfficialDashboard < Administrate::BaseDashboard
+class StaffMemberDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,22 +8,10 @@ class OfficialDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    city: Field::String,
-    staff_members: Field::HasMany,
+    official: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
-    image: Field::String,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-    bio: Field::Text,
-    street: Field::String,
-    city: Field::String,
-    state: Field::String,
-    zip: Field::String,
-    phone: Field::String,
-    fax: Field::String,
     email: Field::String,
-    facebook: Field::String,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -32,56 +20,34 @@ class OfficialDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :city,
-    :staff_members,
+    :official,
     :id,
     :name,
+    :email,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :city,
-    :staff_members,
+    :official,
     :id,
     :name,
-    :image,
-    :created_at,
-    :updated_at,
-    :bio,
-    :street,
-    :city,
-    :state,
-    :zip,
-    :phone,
-    :fax,
     :email,
-    :facebook,
   ]
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :city,
-    :staff_members,
+    :official,
     :name,
-    :image,
-    :bio,
-    :street,
-    :city,
-    :state,
-    :zip,
-    :phone,
-    :fax,
     :email,
-    :facebook,
   ]
 
-  # Overwrite this method to customize how officials are displayed
+  # Overwrite this method to customize how staff members are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(official)
-  #   "Official ##{official.id}"
+  # def display_resource(staff_member)
+  #   "StaffMember ##{staff_member.id}"
   # end
 end

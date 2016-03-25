@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325003201) do
+ActiveRecord::Schema.define(version: 20160325191753) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
@@ -26,8 +26,23 @@ ActiveRecord::Schema.define(version: 20160325003201) do
     t.integer  "city_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "bio"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "facebook"
   end
 
   add_index "officials", ["city_id"], name: "index_officials_on_city_id"
+
+  create_table "staff_members", force: :cascade do |t|
+    t.string  "name"
+    t.string  "email"
+    t.integer "official_id"
+  end
 
 end

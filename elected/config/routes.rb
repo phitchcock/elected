@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :cities
     resources :officials
+    resources :staff_members
 
     root to: "cities#index"
   end
