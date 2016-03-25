@@ -35,6 +35,12 @@ class CitiesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         cell.textLabel?.text = cities[indexPath.row].name
+        if cities[indexPath.row].image.isEmpty {
+            cell.imageView!.image = UIImage(named: "logo")
+        } else {
+            cell.imageView!.imageFromUrl(cities[indexPath.row].image)
+        }
+
         return cell
     }
 
@@ -55,6 +61,7 @@ class CitiesTableViewController: UITableViewController {
                         // TODO: Potential crash if streetnumber != a numerical string need to check
                         var name: String
                         var id: Int
+                        var image: String
 
                         if let nameJson = a["name"] {
                             name = nameJson as! String
@@ -68,8 +75,14 @@ class CitiesTableViewController: UITableViewController {
                             id = 0
                         }
 
+                        if let imageJson = a["image"] {
+                            image = imageJson as! String
+                        } else {
+                            image = "ERROR"
+                        }
 
-                        let city = City(name: name, id: id)
+
+                        let city = City(name: name, id: id, image: image)
                         
                         self.cities.append(city)
                         
