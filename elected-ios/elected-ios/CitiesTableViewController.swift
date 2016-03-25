@@ -33,12 +33,12 @@ class CitiesTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = cities[indexPath.row].name
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CityTableViewCell
+        //cell.textLabel?.text = cities[indexPath.row].name
         if cities[indexPath.row].image.isEmpty {
-            cell.imageView!.image = UIImage(named: "logo")
+            cell.cellImageView.image = UIImage(named: "logo")
         } else {
-            cell.imageView!.imageFromUrl(cities[indexPath.row].image)
+            cell.cellImageView.imageFromUrl(cities[indexPath.row].image)
         }
 
         return cell
