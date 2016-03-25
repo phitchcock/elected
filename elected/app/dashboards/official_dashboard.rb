@@ -24,6 +24,7 @@ class OfficialDashboard < Administrate::BaseDashboard
     fax: Field::String,
     email: Field::String,
     facebook: Field::String,
+    title: Field::String,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -57,6 +58,7 @@ class OfficialDashboard < Administrate::BaseDashboard
     :fax,
     :email,
     :facebook,
+    :title,
   ]
 
   # FORM_ATTRIBUTES
@@ -76,6 +78,7 @@ class OfficialDashboard < Administrate::BaseDashboard
     :fax,
     :email,
     :facebook,
+    :title,
   ]
 
   # Overwrite this method to customize how officials are displayed

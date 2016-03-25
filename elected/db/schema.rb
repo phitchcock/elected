@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325194732) do
+ActiveRecord::Schema.define(version: 20160325235331) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160325194732) do
     t.string   "fax"
     t.string   "email"
     t.string   "facebook"
+    t.string   "title"
   end
 
   add_index "officials", ["city_id"], name: "index_officials_on_city_id"
