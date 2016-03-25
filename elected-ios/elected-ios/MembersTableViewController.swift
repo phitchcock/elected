@@ -20,6 +20,7 @@ class MembersTableViewController: UITableViewController {
         if let city = city {
             title = city.name
         }
+        tableView.rowHeight = 100
         tableView.tableFooterView = UIView()
     }
 

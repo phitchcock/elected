@@ -56,6 +56,10 @@ class ContactViewController: UIViewController {
     }
 
     @IBAction func facebookButtonPressed(sender: UIButton) {
+        UIApplication.tryURL([
+            /* "fb://profile/116374146706" */
+            (official?.fb)! // Website if app fails
+            ])
     }
 
     private func callNumber(phoneNumber:String) {
@@ -89,5 +93,16 @@ extension ContactViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
+}
 
+extension UIApplication {
+    class func tryURL(urls: [String]) {
+        let application = UIApplication.sharedApplication()
+        for url in urls {
+            if application.canOpenURL(NSURL(string: url)!) {
+                application.openURL(NSURL(string: url)!)
+                return
+            }
+        }
+    }
 }
