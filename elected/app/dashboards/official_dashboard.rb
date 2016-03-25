@@ -8,7 +8,7 @@ class OfficialDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    city: Field::String,
+    city: Field::BelongsTo,
     staff_members: Field::HasMany,
     id: Field::Number,
     name: Field::String,
@@ -17,7 +17,7 @@ class OfficialDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
     bio: Field::Text,
     street: Field::String,
-    city: Field::String,
+    city: Field::BelongsTo,
     state: Field::String,
     zip: Field::String,
     phone: Field::String,
