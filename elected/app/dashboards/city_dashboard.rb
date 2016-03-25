@@ -13,6 +13,7 @@ class CityDashboard < Administrate::BaseDashboard
     name: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    image: Field::String,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -35,6 +36,7 @@ class CityDashboard < Administrate::BaseDashboard
     :name,
     :created_at,
     :updated_at,
+    :image,
   ]
 
   # FORM_ATTRIBUTES
@@ -43,6 +45,7 @@ class CityDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :officials,
     :name,
+    :image,
   ]
 
   # Overwrite this method to customize how cities are displayed

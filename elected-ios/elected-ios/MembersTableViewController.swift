@@ -17,6 +17,9 @@ class MembersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getLocations()
+        if let city = city {
+            title = city.name
+        }
     }
 
     override func didReceiveMemoryWarning() {
