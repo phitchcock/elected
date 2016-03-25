@@ -54,6 +54,7 @@ class CitiesTableViewController: UITableViewController {
 
                         // TODO: Potential crash if streetnumber != a numerical string need to check
                         var name: String
+                        var id: Int
 
                         if let nameJson = a["name"] {
                             name = nameJson as! String
@@ -61,7 +62,14 @@ class CitiesTableViewController: UITableViewController {
                             name = "ERROR"
                         }
 
-                        let city = City(name: name)
+                        if let idJson = a["id"] {
+                            id = idJson as! Int
+                        } else {
+                            id = 0
+                        }
+
+
+                        let city = City(name: name, id: id)
                         
                         self.cities.append(city)
                         
@@ -70,5 +78,19 @@ class CitiesTableViewController: UITableViewController {
                 }
         }
         
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "officialsSegue" {
+
+            let dvc = segue.destinationViewController as! MembersTableViewController
+
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let city = cities[row]
+                dvc.city = city
+            }
+        }
+
     }
 }

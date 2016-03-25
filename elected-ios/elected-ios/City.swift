@@ -10,9 +10,11 @@ import Foundation
 
 class City {
     var name: String
+    var id: Int
     var officials: [Official]?
 
-    init(name: String) {
+    init(name: String, id: Int) {
         self.name = name
+        self.id = id
     }
 }

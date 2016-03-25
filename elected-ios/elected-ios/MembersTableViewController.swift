@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class MembersTableViewController: UITableViewController {
 
-    var members = ["three", "four"]
+    var city: City?
+    var officials = [Official]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getLocations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +25,83 @@ class MembersTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return members.count
+        return officials.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = members[indexPath.row]
+        cell.textLabel?.text = officials[indexPath.row].name
         return cell
     }
+
+    func getLocations() {
+
+        Alamofire.request(.GET, "https://sac-elected.herokuapp.com/api/v1/cities/\(city!.id)")
+            .responseJSON { response in
+
+                if let JSON = response.result.value {
+
+                    //print(JSON)
+                    self.officials.removeAll()
+
+                    let dict = JSON
+
+                    let ar = dict["officials"] as! [AnyObject]
+
+                    for a in ar {
+
+                        // TODO: Potential crash if streetnumber != a numerical string need to check
+                        var name: String
+                        var image: String
+                        var cityId: Int
+
+                        if let nameJson = a["name"] {
+                            name = nameJson as! String
+                        } else {
+                            name = "ERROR"
+                        }
+
+                        if let imageJson = a["image"] {
+                            image = imageJson as! String
+                        } else {
+                            image = "ERROR"
+                        }
+
+                        if let idJson = a["id"] {
+                            cityId = idJson as! Int
+                        } else {
+                            cityId = 0
+                        }
+
+                        let official = Official(name: name, image: image, cityId: cityId)
+
+                        self.officials.append(official)
+                        
+                    }
+                    self.tableView.reloadData()
+                }
+        }
+        
+    }
+
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "officialSegue" {
+
+            let dvc = segue.destinationViewController as! ProfileViewController
+
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let official = officials[row]
+                dvc.official = official
+            }
+        }
+        
+    }
+
 
 
 }

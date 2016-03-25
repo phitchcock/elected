@@ -10,10 +10,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    var official: Official?
+
     @IBOutlet weak var contactContainer: UIView!
     @IBOutlet weak var bioContainer: UIView!
     @IBOutlet weak var peopleContainer: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,17 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let official = official {
+            print(official)
+            nameLabel.text = official.name
+            imageView.imageFromUrl(official.image)//UIImage(named: (official.image))
+        }
+
     }
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
