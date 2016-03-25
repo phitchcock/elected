@@ -38,7 +38,6 @@ class ProfileViewController: UIViewController {
             nameLabel.text = official.name
             imageView.imageFromUrl(official.image)//UIImage(named: (official.image))
         }
-
     }
     
     @IBAction func indexChanged(sender: UISegmentedControl) {

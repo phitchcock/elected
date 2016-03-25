@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Sacramento-->
+        <!--Elected Officials-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LandingViewController" customModule="elected_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,28 +18,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-6X-JRP">
-                                <rect key="frame" x="164" y="362" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="20" y="614" width="335" height="45"/>
+                                <state key="normal" title="Find">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="dGH-Ap-RcV" kind="push" id="THs-AG-0OL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elected Officials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-fY-mqq">
-                                <rect key="frame" x="59" y="313" width="256" height="41"/>
+                                <rect key="frame" x="59" y="130" width="256" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="vV5-kF-T2h">
-                                <rect key="frame" x="67" y="182" width="240" height="99"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.050980392156862744" green="0.19607843137254902" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sacramento" id="DIi-kH-kCF">
+                    <navigationItem key="navigationItem" title="Elected Officials" id="DIi-kH-kCF">
                         <barButtonItem key="backBarButtonItem" title=" " id="pCT-3y-8eA"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="electedButton" destination="UdF-6X-JRP" id="P4y-EU-jRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,25 +51,40 @@
         <scene sceneID="6bG-Ry-9bg">
             <objects>
                 <tableViewController id="dGH-Ap-RcV" customClass="CitiesTableViewController" customModule="elected_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" id="VYx-hM-W8Q">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" id="VYx-hM-W8Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.1960784314" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="133" id="ney-6W-hb9" customClass="CityTableViewCell" customModule="elected_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="133"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="135" id="ney-6W-hb9" customClass="CityTableViewCell" customModule="elected_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ney-6W-hb9" id="yBY-Jm-1Jq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jyn-0P-K83">
-                                            <rect key="frame" x="0.0" y="2" width="375" height="128"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jyn-0P-K83">
+                                            <rect key="frame" x="8" y="4" width="359" height="128"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9Q-c7-Xbu">
+                                            <rect key="frame" x="21" y="106" width="333" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="Jyn-0P-K83" firstAttribute="top" secondItem="yBY-Jm-1Jq" secondAttribute="top" constant="4" id="11e-dR-xCD"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jyn-0P-K83" secondAttribute="trailing" constant="8" id="7RR-tC-BLx"/>
+                                        <constraint firstItem="Jyn-0P-K83" firstAttribute="leading" secondItem="yBY-Jm-1Jq" secondAttribute="leading" constant="8" id="DRN-Qt-gac"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jyn-0P-K83" secondAttribute="bottom" constant="3" id="ahj-RK-5qR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="cellImageView" destination="Jyn-0P-K83" id="b9a-cB-Slq"/>
+                                    <outlet property="nameLabel" destination="j9Q-c7-Xbu" id="oCd-Yd-MMw"/>
                                     <segue destination="c2L-qk-Scw" kind="push" identifier="officialsSegue" id="gvi-mW-63M"/>
                                 </connections>
                             </tableViewCell>
@@ -89,28 +106,33 @@
         <scene sceneID="dzm-Ng-XOC">
             <objects>
                 <tableViewController id="c2L-qk-Scw" customClass="MembersTableViewController" customModule="elected_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LVg-bn-XIQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="LVg-bn-XIQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.050980392159999999" green="0.1960784314" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="hl6-cQ-ZS6" style="IBUITableViewCellStyleDefault" id="HND-6p-1D2">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="HND-6p-1D2" customClass="OfficialTableViewCell" customModule="elected_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HND-6p-1D2" id="J9D-8S-w8c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hl6-cQ-ZS6">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZc-oc-2BP">
+                                            <rect key="frame" x="8" y="8" width="58" height="58"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AV6-4S-KTo">
+                                            <rect key="frame" x="74" y="26" width="260" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cellImageView" destination="gZc-oc-2BP" id="O3x-1T-O1Y"/>
+                                    <outlet property="nameLabel" destination="AV6-4S-KTo" id="ZGH-YP-BiO"/>
                                     <segue destination="5W8-8m-sZj" kind="presentation" identifier="officialSegue" id="jSE-ly-nI0"/>
                                 </connections>
                             </tableViewCell>
@@ -143,10 +165,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-rH-C7X">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                             </imageView>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSw-CY-QBI">
+                            <view clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSw-CY-QBI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-ns-ptU">
+                                <rect key="frame" x="337" y="28" width="18" height="19"/>
+                                <state key="normal" image="Close Icon"/>
+                                <connections>
+                                    <segue destination="JjF-0o-LVg" kind="unwind" unwindAction="unwind:" id="42f-E1-E7J"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phil Serna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-FJ-dSI">
                                 <rect key="frame" x="20" y="268" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -179,9 +208,9 @@
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ckq-X3-iME">
                                 <rect key="frame" x="0.0" y="376" width="375" height="29"/>
-                                <color key="backgroundColor" red="0.73725490199999999" green="0.75294117650000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.1960784314" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
-                                    <segment title="Contact"/>
+                                    <segment title="Connect"/>
                                     <segment title="Bio"/>
                                     <segment title="People"/>
                                 </segments>
@@ -190,13 +219,6 @@
                                     <action selector="indexChanged:" destination="5W8-8m-sZj" eventType="valueChanged" id="iq6-if-cFH"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-ns-ptU">
-                                <rect key="frame" x="309" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="JjF-0o-LVg" kind="unwind" unwindAction="unwind:" id="42f-E1-E7J"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -250,8 +272,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njK-1e-tAw">
-                                <rect key="frame" x="157" y="20" width="61" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="916-874-5411" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzI-bC-fKP">
+                                <rect key="frame" x="22" y="69" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jK-wM-SdN">
+                                <rect key="frame" x="20" y="154" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-cp-oda">
+                                <rect key="frame" x="20" y="40" width="337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rt-k3-ETO">
+                                <rect key="frame" x="22" y="98" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r3-Jx-61O">
+                                <rect key="frame" x="20" y="127" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -277,20 +323,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-8Y-EmI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1654"/>
+                                <rect key="frame" x="0.0" y="8" width="375" height="244"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">About Supervisor Phil Serna
+                                <mutableString key="text">About Supervisor Phil Serna
 Voters elected Phil Serna to serve on the Sacramento County Board Supervisors in June 2010.
 
 Phil, 45, grew up in Sacramento’s Curtis Park neighborhood and attended local schools.  The son of Sacramento’s first Latino mayor, Joe Serna, Jr., Phil developed an appreciation for public service at a very young age.  His respect for his family’s humble beginnings and their efforts working with Cesar Chavez to secure rights for farm workers also shaped Phil’s desire to serve.
 
-After completing his undergraduate studies at California State University, Sacramento, Phil earned a master’s degree in city and regional planning from Cal Poly, San Luis Obispo, graduating with honors in 1994.  While attending graduate school, Phil met his future wife Roxanna and they’ve been happily married for 18 years.  They live in Sacramento’s North Natomas neighborhood.
-
-In addition to his service on the Board of Supervisors, Phil participates on a number of other boards and commissions, including: Chairing the Sacramento First 5 Commission, Sacramento Metropolitan Air Quality Management District, Sacramento Library Authority and serving on the boards of Sacramento Regional Transit, Sacramento Area Flood Control Agency, Sacramento Area Council of Governments, Sacramento Solid Waste Authority, and just to name a few.  In February 2013, Phil received a Gubernatorial Appointment to the California Air Resources Board.
-
-The district Supervisor Serna represents extends from the Sacramento-Sutter County line south to Florin Road east of Power Inn Road, and from the Sacramento River east to stretches of Watt Avenue.  District 1 includes the Sacramento International Airport as well as McClellan Business Park, and many of the region’s most established neighborhoods such as Downtown, Oak Park and Woodlake.  Following the County’s latest redistricting effort Supervisor Serna now represents Old Land Park, East Sacramento and River Park, as well as industrial and commercial areas like Depot Park and Point West.
-
-Because most of District 1 overlaps with the City of Sacramento, many of the issues Supervisor Serna deals with pertain to countywide services; i.e., services the County provides exclusively, separate from municipal services.  These include health and social services such as mental and indigent health care, as well as protective services for children and the elderly.  Phil is also focused on public safety and enhancing the environment.  He routinely works to secure the flood protection residents deserve, and to protect and improve the American River Parkway.  Advancing these and other priorities take resources and that’s why during a very difficult economy Supervisor Serna is working to ensure the County is run efficiently and effectively, and that we actively retain and attract new businesses and jobs.
+services.  These include health and social services such as mental and indigent health care, as well as protective services for children and the elderly.  Phil is also focused on public safety and enhancing the environment.  He routinely works to secure the flood protection residents deserve, and to protect and improve the American River Parkway.  Advancing these and other priorities take resources and that’s why during a very difficult economy Supervisor Serna is working to ensure the County is run efficiently and effectively, and that we actively retain and attract new businesses and jobs.
 
 In what little spare time Phil has, he enjoys fly fishing and playing bass guitar and drums with his bands.
 
@@ -325,7 +365,7 @@ Stockton Boulevard Partnership
 Sacramento Area Flood Control Agency 
 Tobacco Securitization Corporation
 California Air Resources Board
-Firefighters Burn Institute Advisory Board</string>
+Firefighters Burn Institute Advisory Board</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -365,6 +405,6 @@ Firefighters Burn Institute Advisory Board</string>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="260" height="64"/>
+        <image name="Close Icon" width="28" height="29"/>
     </resources>
 </document>

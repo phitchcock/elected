@@ -23,6 +23,7 @@ class CitiesTableViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.tableFooterView = UIView()
         getLocations()
     }
 
@@ -34,7 +35,7 @@ class CitiesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CityTableViewCell
-        //cell.textLabel?.text = cities[indexPath.row].name
+        cell.nameLabel.text = cities[indexPath.row].name
         if cities[indexPath.row].image.isEmpty {
             cell.cellImageView.image = UIImage(named: "logo")
         } else {

@@ -20,6 +20,7 @@ class MembersTableViewController: UITableViewController {
         if let city = city {
             title = city.name
         }
+        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,8 +33,13 @@ class MembersTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = officials[indexPath.row].name
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! OfficialTableViewCell
+        cell.nameLabel.text = officials[indexPath.row].name
+        if officials[indexPath.row].image.isEmpty {
+            cell.cellImageView.image = UIImage(named: "logo")
+        } else {
+            cell.cellImageView.imageFromUrl(officials[indexPath.row].image)
+        }
         return cell
     }
 
