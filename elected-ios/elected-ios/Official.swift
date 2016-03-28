@@ -21,8 +21,9 @@ class Official {
     var email: String
     var fax: String
     var fb: String?
+    var title: String
 
-    init(name: String, image: String, cityId: Int, bio: String, street: String, cityCode: String, state: String, zip: String, phone: String, email: String, fax: String) {
+    init(name: String, image: String, cityId: Int, bio: String, street: String, cityCode: String, state: String, zip: String, phone: String, email: String, fax: String, title: String) {
         self.name = name
         self.image = image
         self.cityId = cityId
@@ -34,5 +35,6 @@ class Official {
         self.phone = phone
         self.email = email
         self.fax = fax
+        self.title = title
     }
 }

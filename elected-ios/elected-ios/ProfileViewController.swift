@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class ProfileViewController: UIViewController {
         if let official = official {
             print(official)
             nameLabel.text = official.name
+            titleLabel.text = official.title
             imageView.imageFromUrl(official.image)//UIImage(named: (official.image))
         }
     }

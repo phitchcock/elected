@@ -1,27 +1,23 @@
 //
-//  MembersTableViewController.swift
+//  SearchTableViewController.swift
 //  elected-ios
 //
-//  Created by Peter Hitchcock on 3/24/16.
+//  Created by Peter Hitchcock on 3/28/16.
 //  Copyright © 2016 Peter Hitchcock. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 
-class MembersTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController {
 
-    var city: City?
     var officials = [Official]()
+    var searchActive = false
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getLocations()
-        if let city = city {
-            title = city.name
-        }
-        tableView.rowHeight = 100
-        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,29 +25,27 @@ class MembersTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return officials.count
     }
 
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! OfficialTableViewCell
-        cell.nameLabel.text = officials[indexPath.row].name
-        if officials[indexPath.row].image.isEmpty {
-            cell.cellImageView.image = UIImage(named: "logo")
-        } else {
-            cell.cellImageView.imageFromUrl(officials[indexPath.row].image)
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        cell.textLabel?.text = officials[indexPath.row].name
+
         return cell
     }
 
-    func getLocations() {
+    func searchForOfficials(search: String) {
 
-        Alamofire.request(.GET, "https://sac-elected.herokuapp.com/api/v1/cities/\(city!.id)")
+        Alamofire.request(.GET, "")
             .responseJSON { response in
 
                 if let JSON = response.result.value {
 
-                    //print(JSON)
                     self.officials.removeAll()
 
                     let dict = JSON
@@ -152,13 +146,12 @@ class MembersTableViewController: UITableViewController {
                             title = "ERROR"
                         }
 
-
                         let official = Official(name: name, image: image, cityId: cityId, bio: bio, street: street, cityCode: cityCode, state: state, zip: zip, phone: phone, email: email, fax: fax, title: title)
-
+                        
                         if fb != nil {
                             official.fb = fb
                         }
-
+                        
                         self.officials.append(official)
                         
                     }
@@ -168,24 +161,37 @@ class MembersTableViewController: UITableViewController {
         
     }
 
-    @IBAction func unwind(segue: UIStoryboardSegue) {
+}
 
+extension SearchTableViewController: UISearchBarDelegate {
+
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false
+    }
 
-        if segue.identifier == "officialSegue" {
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+    }
 
-            let dvc = segue.destinationViewController as! ProfileViewController
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+        searchBar.resignFirstResponder()
+    }
 
-            if let row = tableView.indexPathForSelectedRow?.row {
-                let official = officials[row]
-                dvc.official = official
-            }
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+
+        searchForOfficials(searchText.removeWhitespace())
+
+        if officials.count == 0 {
+            searchActive = false
+        } else {
+            searchActive = true
         }
-        
+        self.tableView.reloadData()
     }
-
-
-
+    
 }
