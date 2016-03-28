@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-elected-ios.xcscheme</key>
+		<key>HanekeSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SMSegmentView.xcscheme</key>
+		<key>Pods-elected-ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>40140FDABC7DD90E05BE5BFD5854D8BF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5B4EF55FE1B61848D4B9EE8073616E83</key>
+		<key>2C2B1953A91633859BF7AD238FF567A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>922E7FA91B0345DF8F2DC57E9062FB81</key>
+		<key>8F4388D66DF71C2016F74087235C40A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C05933E6E34EA8F892BCF94154DEFF8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

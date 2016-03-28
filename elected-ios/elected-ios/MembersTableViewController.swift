@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Haneke
 
 class MembersTableViewController: UITableViewController {
 
@@ -39,7 +40,9 @@ class MembersTableViewController: UITableViewController {
         if officials[indexPath.row].image.isEmpty {
             cell.cellImageView.image = UIImage(named: "logo")
         } else {
-            cell.cellImageView.imageFromUrl(officials[indexPath.row].image)
+            let URLString = officials[indexPath.row].image
+            let URL = NSURL(string:URLString)!
+            cell.cellImageView.hnk_setImageFromURL(URL)
         }
         return cell
     }

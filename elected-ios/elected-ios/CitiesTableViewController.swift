@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Haneke
 
 class CitiesTableViewController: UITableViewController {
 
@@ -39,7 +40,9 @@ class CitiesTableViewController: UITableViewController {
         if cities[indexPath.row].image.isEmpty {
             cell.cellImageView.image = UIImage(named: "logo")
         } else {
-            cell.cellImageView.imageFromUrl(cities[indexPath.row].image)
+            let URLString = cities[indexPath.row].image
+            let URL = NSURL(string:URLString)!
+            cell.cellImageView.hnk_setImageFromURL(URL)
         }
 
         return cell
