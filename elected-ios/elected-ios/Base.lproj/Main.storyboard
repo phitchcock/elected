@@ -214,21 +214,21 @@
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEm-Fi-nr6">
                                         <rect key="frame" x="250" y="0.0" width="125" height="49"/>
-                                        <state key="normal" title="Staff"/>
+                                        <state key="normal" title="STAFF"/>
                                         <connections>
                                             <action selector="indexChanged:" destination="5W8-8m-sZj" eventType="touchUpInside" id="Bwr-px-xFc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv3-Mm-HzS">
                                         <rect key="frame" x="125" y="0.0" width="125" height="49"/>
-                                        <state key="normal" title="Bio"/>
+                                        <state key="normal" title="BIO"/>
                                         <connections>
                                             <action selector="indexChanged:" destination="5W8-8m-sZj" eventType="touchUpInside" id="PaU-mn-1eG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqi-Lc-xMe">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="49"/>
-                                        <state key="normal" title="Connect"/>
+                                        <state key="normal" title="CONNECT"/>
                                         <connections>
                                             <action selector="indexChanged:" destination="5W8-8m-sZj" eventType="touchUpInside" id="SSr-4V-saF"/>
                                         </connections>
@@ -513,7 +513,7 @@
             </objects>
             <point key="canvasLocation" x="2931.5" y="1864.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Developed By-->
         <scene sceneID="qYw-pj-qeI">
             <objects>
                 <viewController id="zXa-Kh-Tzx" sceneMemberID="viewController">
@@ -526,12 +526,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Developed By" id="dzR-zI-ZjH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocy-NI-3N4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2489.5" y="2526.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Alamofire-->
         <scene sceneID="VXz-Jj-Do7">
             <objects>
                 <viewController id="7wh-zu-ggf" sceneMemberID="viewController">
@@ -544,12 +545,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Alamofire" id="09X-WI-grX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuZ-Qj-r3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2941.5" y="2602.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Spring-->
         <scene sceneID="GOa-X7-vb4">
             <objects>
                 <viewController id="LD6-oa-buX" sceneMemberID="viewController">
@@ -562,12 +564,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Spring" id="cpc-BV-wKE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztR-pu-G4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3419.5" y="2864.5"/>
         </scene>
-        <!--View Controller-->
+        <!--HanekeSwift-->
         <scene sceneID="rvq-k3-M9t">
             <objects>
                 <viewController id="JUq-dN-2T6" sceneMemberID="viewController">
@@ -580,12 +583,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="HanekeSwift" id="6qz-KA-GbP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyZ-ax-IFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3419.5" y="2112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Sacramento County-->
         <scene sceneID="mO2-If-d4a">
             <objects>
                 <viewController id="Cem-wI-MDf" sceneMemberID="viewController">
@@ -598,6 +602,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Sacramento County" id="YKL-Gr-8qk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnL-dg-qpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -744,7 +749,9 @@
                             <outlet property="delegate" destination="gIr-P8-EC7" id="zN0-Az-h85"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Info" id="DWC-hG-G8e"/>
+                    <navigationItem key="navigationItem" title="Info" id="DWC-hG-G8e">
+                        <barButtonItem key="backBarButtonItem" title=" " id="b4j-kR-TlB"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBw-Yd-XVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
