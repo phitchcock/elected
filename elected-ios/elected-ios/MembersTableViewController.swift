@@ -37,6 +37,7 @@ class MembersTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! OfficialTableViewCell
         cell.nameLabel.text = officials[indexPath.row].name
+        cell.titleLabel.text = officials[indexPath.row].title
         if officials[indexPath.row].image.isEmpty {
             cell.cellImageView.image = UIImage(named: "logo")
         } else {

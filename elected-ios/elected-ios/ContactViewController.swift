@@ -28,7 +28,7 @@ class ContactViewController: UIViewController {
             cityLabel.text = "\(official.cityCode) \(official.state) \(official.zip)"
             phoneLabel.text = "Phone: \(official.phone)"
             faxLabel.text = "Fax: \(official.fax)"
-            emailLabel.text = "Email: \(official.email)"
+            emailLabel.text = "\(official.email)"
         }
 
     }

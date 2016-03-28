@@ -12,12 +12,13 @@ class OfficialTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         cellImageView.layer.cornerRadius = 5
-        cellImageView.layer.borderWidth = 1
-        cellImageView.layer.borderColor = UIColor(red: 13/255, green: 50/255, blue: 80/255, alpha: 1.0).CGColor
+        cellImageView.layer.borderWidth = 2
+        cellImageView.layer.borderColor = UIColor.lightGrayColor().CGColor
         cellImageView.clipsToBounds = true
     }
 
