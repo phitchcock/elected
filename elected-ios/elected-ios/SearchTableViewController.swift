@@ -18,6 +18,8 @@ class SearchTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 100
+        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,12 +32,14 @@ class SearchTableViewController: UITableViewController {
         return officials.count
     }
 
-
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
-        cell.textLabel?.text = officials[indexPath.row].name
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! OfficialTableViewCell
+        cell.nameLabel.text = officials[indexPath.row].name
+        if officials[indexPath.row].image.isEmpty {
+            cell.cellImageView.image = UIImage(named: "logo")
+        } else {
+            cell.cellImageView.imageFromUrl(officials[indexPath.row].image)
+        }
         return cell
     }
 
@@ -161,6 +165,19 @@ class SearchTableViewController: UITableViewController {
         
     }
 
+    //officialSegueFromSearch
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "officialSegueFromSearch" {
+
+            let dvc = segue.destinationViewController as! ProfileViewController
+
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let official = officials[row]
+                dvc.official = official
+            }
+        }
+    }
+
 }
 
 extension SearchTableViewController: UISearchBarDelegate {
@@ -175,6 +192,11 @@ extension SearchTableViewController: UISearchBarDelegate {
 
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchActive = false
+        searchBar.resignFirstResponder()
+        searchBar.placeholder = "Search Officials"
+        searchBar.text = ""
+        officials.removeAll()
+        tableView.reloadData()
     }
 
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -193,5 +215,4 @@ extension SearchTableViewController: UISearchBarDelegate {
         }
         self.tableView.reloadData()
     }
-    
 }

@@ -15,7 +15,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var contactContainer: UIView!
     @IBOutlet weak var bioContainer: UIView!
     @IBOutlet weak var peopleContainer: UIView!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,7 +22,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideContainerViewsByIndex()
+        hideContainerViewsByIndex(1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,32 +41,36 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func indexChanged(sender: UISegmentedControl) {
+    @IBAction func indexChanged(sender: UIButton) {
 
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            hideContainerViewsByIndex()
+        switch sender.tag {
         case 1:
-            hideContainerViewsByIndex()
+            hideContainerViewsByIndex(sender.tag)
         case 2:
-            hideContainerViewsByIndex()
+            hideContainerViewsByIndex(sender.tag)
+        case 3:
+            hideContainerViewsByIndex(sender.tag)
         default:
             break
         }
     }
 
-    func hideContainerViewsByIndex() {
-        if segmentedControl.selectedSegmentIndex == 0 {
+    @IBAction func dismissVC(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func hideContainerViewsByIndex(tag: Int) {
+        if tag == 1 {
             contactContainer.hidden = false
             bioContainer.hidden = true
             peopleContainer.hidden = true
         }
-        else if segmentedControl.selectedSegmentIndex == 1 {
+        else if tag == 2 {
             contactContainer.hidden = true
             bioContainer.hidden = false
             peopleContainer.hidden = true
         }
-        else if segmentedControl.selectedSegmentIndex == 2 {
+        else if tag == 3 {
             contactContainer.hidden = true
             bioContainer.hidden = true
             peopleContainer.hidden = false

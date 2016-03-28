@@ -15,15 +15,13 @@ class OfficialTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        cellImageView.layer.cornerRadius = cellImageView.frame.height / 2
+        cellImageView.layer.cornerRadius = 5
+        cellImageView.layer.borderWidth = 1
+        cellImageView.layer.borderColor = UIColor(red: 13/255, green: 50/255, blue: 80/255, alpha: 1.0).CGColor
         cellImageView.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }
