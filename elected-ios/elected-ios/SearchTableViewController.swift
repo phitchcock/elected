@@ -41,7 +41,7 @@ class SearchTableViewController: UITableViewController {
 
     func searchForOfficials(search: String) {
 
-        Alamofire.request(.GET, "")
+        Alamofire.request(.GET, "https://sac-elected.herokuapp.com/api/v1/officials?utf8=%E2%9C%93&filterrific%5Bsearch_query%5D=\(search)")
             .responseJSON { response in
 
                 if let JSON = response.result.value {

@@ -23,7 +23,7 @@ class Official < ActiveRecord::Base
   num_or_conds = 1
 
   clause = terms.map { |term|
-      "(LOWER(checks.name) LIKE ?)"
+      "(LOWER(officials.name) LIKE ?)"
     }.join(' AND '),
     *terms.map { |e| [e] * num_or_conds }.flatten
 
