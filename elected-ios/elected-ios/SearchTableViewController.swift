@@ -21,6 +21,16 @@ class SearchTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 100
         tableView.tableFooterView = UIView()
+
+        searchBar.setShowsCancelButton(true, animated: true)
+        for ob: UIView in ((searchBar.subviews[0] )).subviews {
+
+            if let z = ob as? UIButton {
+                let btn: UIButton = z
+                btn.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Disabled)
+                btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -197,7 +207,7 @@ extension SearchTableViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchActive = false
         searchBar.resignFirstResponder()
-        searchBar.placeholder = "Search Officials"
+        searchBar.placeholder = ""
         searchBar.text = ""
         officials.removeAll()
         tableView.reloadData()

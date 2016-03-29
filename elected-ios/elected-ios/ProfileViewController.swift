@@ -18,6 +18,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var bioButton: UIButton!
+    @IBOutlet weak var staffButton: UIButton!
     
 
     override func viewDidLoad() {
