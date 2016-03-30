@@ -85,6 +85,7 @@ class SearchTableViewController: UITableViewController {
                         var fb: String?
                         var fax: String
                         var title: String
+                        var staffMembers: [StaffMember]?
 
                         if let nameJson = a["name"] {
                             name = nameJson as! String
@@ -169,6 +170,14 @@ class SearchTableViewController: UITableViewController {
                         if fb != nil {
                             official.fb = fb
                         }
+
+                        /*
+                        if let staffJson = a["staff_members"] {
+                            if staffJson != nil {
+                                print(staffJson)
+                            }
+                        }
+                        */
                         
                         self.officials.append(official)
                         

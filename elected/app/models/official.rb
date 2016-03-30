@@ -21,7 +21,6 @@ class Official < ActiveRecord::Base
 
     num_or_conds = 1
 
-    byebug
     clause = terms.map { |term|
       "(LOWER(officials.name) LIKE ?)"
     }.join(' AND '),

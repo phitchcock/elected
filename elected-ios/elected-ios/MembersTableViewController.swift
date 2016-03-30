@@ -77,6 +77,7 @@ class MembersTableViewController: UITableViewController {
                         var fb: String?
                         var fax: String
                         var title: String
+                        var staffMembers: [StaffMember]?
 
                         if let nameJson = a["name"] {
                             name = nameJson as! String
@@ -156,12 +157,17 @@ class MembersTableViewController: UITableViewController {
                             title = "ERROR"
                         }
 
+                        if let staffJson = a["staff_members"] {
+                            print(staffJson)
+                        }
 
                         let official = Official(name: name, image: image, cityId: cityId, bio: bio, street: street, cityCode: cityCode, state: state, zip: zip, phone: phone, email: email, fax: fax, title: title)
 
                         if fb != nil {
                             official.fb = fb
                         }
+
+
 
                         self.officials.append(official)
                         
