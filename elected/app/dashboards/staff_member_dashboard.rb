@@ -12,6 +12,7 @@ class StaffMemberDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     email: Field::String,
+    title: Field::String,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -33,6 +34,7 @@ class StaffMemberDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :email,
+    :title,
   ]
 
   # FORM_ATTRIBUTES
@@ -42,6 +44,7 @@ class StaffMemberDashboard < Administrate::BaseDashboard
     :official,
     :name,
     :email,
+    :title,
   ]
 
   # Overwrite this method to customize how staff members are displayed
