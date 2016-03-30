@@ -85,7 +85,7 @@ class SearchTableViewController: UITableViewController {
                         var fb: String?
                         var fax: String
                         var title: String
-                        var staffMembers: [StaffMember]?
+                        var staffMembers = [StaffMember]()
 
                         if let nameJson = a["name"] {
                             name = nameJson as! String
@@ -171,13 +171,32 @@ class SearchTableViewController: UITableViewController {
                             official.fb = fb
                         }
 
-                        /*
+
                         if let staffJson = a["staff_members"] {
-                            if staffJson != nil {
-                                print(staffJson)
+
+                            var dict = staffJson as! [AnyObject]
+
+                            staffMembers.removeAll()
+
+                            for o in dict {
+                                var name1 = String()
+                                var email1 = String()
+
+                                if let nameJ = o["name"] {
+                                    name1 = nameJ as! String
+                                }
+
+                                if let emailJ = o["email"] {
+                                    email1 = emailJ as! String
+                                }
+
+                                let staffMember = StaffMember(name: name1, email: email1)
+
+                                official.staffMembers = staffMembers
+
+                                staffMembers.append(staffMember)
                             }
                         }
-                        */
                         
                         self.officials.append(official)
                         
@@ -197,6 +216,7 @@ class SearchTableViewController: UITableViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let official = officials[row]
                 dvc.official = official
+                print(official.staffMembers?.count)
             }
         }
     }

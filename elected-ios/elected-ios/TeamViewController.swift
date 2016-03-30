@@ -11,13 +11,18 @@ import UIKit
 class TeamViewController: UIViewController {
 
     var official: Official?
-    var members = ["one", "two"]
+    var members = [StaffMember]()
+    var empty = ["No Members"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let official = official {
-            print(official.name)
+            if let staff = official.staffMembers {
+                if staff.count > 0 {
+                    members = staff
+                }
+            }
         }
     }
 
@@ -29,12 +34,22 @@ class TeamViewController: UIViewController {
 
 extension TeamViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return members.count
+        if members.count > 0 {
+            return members.count
+        } else {
+            return empty.count
+        }
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        cell.textLabel?.text = members[indexPath.row]
-        return cell
+        if members.count > 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+            cell.textLabel?.text = members[indexPath.row].name
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+            cell.textLabel?.text = empty[indexPath.row]
+            return cell
+        }
     }
 }
