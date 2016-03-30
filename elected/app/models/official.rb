@@ -11,26 +11,25 @@ class Official < ActiveRecord::Base
   )
 
   scope :search_query, lambda { |query|
+    return nil if query.blank?
 
-  return nil  if query.blank?
+    terms = query.downcase.split(/\s+/)
 
-  terms = query.downcase.split(/\s+/)
+    terms = terms.map { |e|
+      (e.gsub('', '%') + '%').gsub(/%+/, '%')
+    }
 
-  terms = terms.map { |e|
-    (e.gsub('', '%') + '%').gsub(/%+/, '%')
-  }
+    num_or_conds = 1
 
-  num_or_conds = 1
-
-  clause = terms.map { |term|
+    byebug
+    clause = terms.map { |term|
       "(LOWER(officials.name) LIKE ?)"
     }.join(' AND '),
     *terms.map { |e| [e] * num_or_conds }.flatten
 
-  where(clause)
-}
+    where(clause)
+  }
 
-scope :sorted_by, lambda { |sort_key|
-}
-
+  scope :sorted_by, lambda { |sort_key|
+  }
 end

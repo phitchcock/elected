@@ -35,6 +35,7 @@
 		D047BA621CA5C2840029550F /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA611CA5C2840029550F /* BioViewController.swift */; };
 		D047BA641CA98A5C0029550F /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA631CA98A5C0029550F /* SearchTableViewController.swift */; };
 		D047BA671CA98EC30029550F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA661CA98EC30029550F /* StringExtension.swift */; };
+		D0578CC21CAC305A002C7B39 /* StaffMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0578CC11CAC305A002C7B39 /* StaffMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		D047BA611CA5C2840029550F /* BioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		D047BA631CA98A5C0029550F /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		D047BA661CA98EC30029550F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D0578CC11CAC305A002C7B39 /* StaffMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			children = (
 				D047BA4F1CA49DAC0029550F /* City.swift */,
 				D047BA511CA49DFD0029550F /* Official.swift */,
+				D0578CC11CAC305A002C7B39 /* StaffMember.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				D047BA4E1CA485A70029550F /* LandingViewController.swift in Sources */,
 				D047BA541CA4B44A0029550F /* UIImageViewExtension.swift in Sources */,
 				9DD33FD31C97C349006FAF4C /* AppDelegate.swift in Sources */,
+				D0578CC21CAC305A002C7B39 /* StaffMember.swift in Sources */,
 				9D49B9601CAA305C00F8900B /* AlamofireViewController.swift in Sources */,
 				D047BA521CA49DFD0029550F /* Official.swift in Sources */,
 				D047BA5E1CA5B3040029550F /* WebViewController.swift in Sources */,

@@ -22,6 +22,7 @@ class Official {
     var fax: String
     var fb: String?
     var title: String
+    var staffMembers: [StaffMember]?
 
     init(name: String, image: String, cityId: Int, bio: String, street: String, cityCode: String, state: String, zip: String, phone: String, email: String, fax: String, title: String) {
         self.name = name
