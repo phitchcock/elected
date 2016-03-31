@@ -12,15 +12,24 @@ class TeamViewController: UIViewController {
 
     var official: Official?
     var members = [StaffMember]()
-    var empty = ["No Members"]
+    var empty = ["No staff members at this time"]
+
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.tableFooterView = UIView()
+
         if let official = official {
             if let staff = official.staffMembers {
-                if staff.count > 0 {
+                if staff.isEmpty {
+
+                }
+                else {
                     members = staff
+                    print(official.staffMembers!.count)
+
                 }
             }
         }
@@ -45,11 +54,17 @@ extension TeamViewController: UITableViewDataSource, UITableViewDelegate {
         if members.count > 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
             cell.textLabel?.text = members[indexPath.row].name
+            cell.detailTextLabel?.text = members[indexPath.row].title
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
             cell.textLabel?.text = empty[indexPath.row]
+            cell.detailTextLabel?.text = ""
             return cell
         }
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

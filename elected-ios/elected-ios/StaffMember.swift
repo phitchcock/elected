@@ -11,9 +11,11 @@ import Foundation
 class StaffMember {
     var name: String
     var email: String
+    var title: String
 
-    init(name: String, email: String) {
+    init(name: String, email: String, title: String) {
         self.name = name
         self.email = email
+        self.title = title
     }
 }

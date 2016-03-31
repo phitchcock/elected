@@ -171,11 +171,10 @@ class MembersTableViewController: UITableViewController {
 
                             var dict = staffJson as! [AnyObject]
 
-                            staffMembers.removeAll()
-
                             for o in dict {
                                 var name1 = String()
                                 var email1 = String()
+                                var title1 = String()
 
                                 if let nameJ = o["name"] {
                                     name1 = nameJ as! String
@@ -185,17 +184,25 @@ class MembersTableViewController: UITableViewController {
                                     email1 = emailJ as! String
                                 }
 
-                                let staffMember = StaffMember(name: name1, email: email1)
+                                if let titleJ = o["title"] {
+                                    title1 = titleJ as! String
+                                }
+
+                                let staffMember = StaffMember(name: name1, email: email1, title: title1)
 
                                 official.staffMembers = staffMembers
-                                
+                                print(staffMembers.count)
+                                print(official.staffMembers)
                                 staffMembers.append(staffMember)
                             }
+
+
                         }
 
                         self.officials.append(official)
                         
                     }
+
                     self.tableView.reloadData()
                 }
         }
@@ -215,6 +222,7 @@ class MembersTableViewController: UITableViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let official = officials[row]
                 dvc.official = official
+                print(official.staffMembers?.count)
             }
         }
         

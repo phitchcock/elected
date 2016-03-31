@@ -181,6 +181,7 @@ class SearchTableViewController: UITableViewController {
                             for o in dict {
                                 var name1 = String()
                                 var email1 = String()
+                                var title1 = String()
 
                                 if let nameJ = o["name"] {
                                     name1 = nameJ as! String
@@ -190,7 +191,11 @@ class SearchTableViewController: UITableViewController {
                                     email1 = emailJ as! String
                                 }
 
-                                let staffMember = StaffMember(name: name1, email: email1)
+                                if let titleJ = o["title"] {
+                                    title1 = titleJ as! String
+                                }
+
+                                let staffMember = StaffMember(name: name1, email: email1, title: title1)
 
                                 official.staffMembers = staffMembers
 
