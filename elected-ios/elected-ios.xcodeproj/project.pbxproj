@@ -95,6 +95,7 @@
 		D047BA661CA98EC30029550F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		D0578CC11CAC305A002C7B39 /* StaffMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffMember.swift; sourceTree = "<group>"; };
 		D0578CC31CACAC45002C7B39 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		D0C4A4E31CAD85180081E9D8 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9DD340001C97C35B006FAF4C /* Podfile */,
+				D0C4A4E31CAD85180081E9D8 /* Bridging-Header.h */,
 				9DD33FD11C97C349006FAF4C /* elected-ios */,
 				9DD33FE61C97C349006FAF4C /* elected-iosTests */,
 				9DD33FF11C97C349006FAF4C /* elected-iosUITests */,

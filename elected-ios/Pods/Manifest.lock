@@ -1,10 +1,12 @@
 PODS:
   - Alamofire (3.2.1)
+  - DZNEmptyDataSet (1.7.3)
   - HanekeSwift (0.10.1)
   - Spring (1.0.3)
 
 DEPENDENCIES:
   - Alamofire
+  - DZNEmptyDataSet
   - HanekeSwift
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
 
@@ -20,9 +22,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: c82da8a501c47b46f6f614424962403282d08f4e
+PODFILE CHECKSUM: d898c868c0a029e61133d1d9b7d3117813b11edb
 
 COCOAPODS: 1.0.0.beta.4
