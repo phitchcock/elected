@@ -186,16 +186,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="358"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Sacramento County Board of Supervisors" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-ra-f7Q">
-                                <rect key="frame" x="20" y="302" width="335" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phil Serna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4l-FJ-dSI">
-                                <rect key="frame" x="20" y="266" width="339" height="36"/>
+                                <rect key="frame" x="16" y="270" width="339" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Sacramento County Board of Supervisors" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-ra-f7Q">
+                                <rect key="frame" x="61" y="308" width="248" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-ns-ptU">
@@ -218,10 +218,10 @@
                                 </connections>
                             </containerView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPD-wN-JH2">
-                                <rect key="frame" x="0.0" y="358" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="358" width="375" height="45"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEm-Fi-nr6">
-                                        <rect key="frame" x="260" y="0.0" width="115" height="49"/>
+                                        <rect key="frame" x="260" y="0.0" width="115" height="45"/>
                                         <color key="backgroundColor" red="0.094117647060000004" green="0.19215686269999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="STAFF">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,7 +231,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv3-Mm-HzS">
-                                        <rect key="frame" x="130" y="0.0" width="115" height="49"/>
+                                        <rect key="frame" x="130" y="0.0" width="115" height="45"/>
                                         <color key="backgroundColor" red="0.094117647058823528" green="0.19215686274509805" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="BIO">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,7 +241,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqi-Lc-xMe">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="49"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="45"/>
                                         <color key="backgroundColor" red="0.094117647060000004" green="0.19215686269999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="CONNECT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -251,18 +251,18 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc8-YZ-aAe">
-                                        <rect key="frame" x="122" y="4" width="1" height="40"/>
+                                        <rect key="frame" x="122" y="4" width="1" height="36"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8fB-lK-TQI">
-                                        <rect key="frame" x="252" y="5" width="1" height="40"/>
+                                        <rect key="frame" x="252" y="4" width="1" height="36"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.094117647058823528" green="0.19215686274509802" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5R-7b-PiC">
-                                <rect key="frame" x="0.0" y="407" width="375" height="260"/>
+                                <rect key="frame" x="0.0" y="403" width="375" height="264"/>
                                 <connections>
                                     <segue destination="Li9-AC-E3n" kind="embed" identifier="staffSegue" id="7Tg-ly-FGB"/>
                                 </connections>
@@ -286,11 +286,11 @@
             </objects>
             <point key="canvasLocation" x="2969.5" y="387.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="Xyg-xp-6Te">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wRQ-Jc-4a1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="mBb-PJ-vy2"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="mBb-PJ-vy2"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ro2-Uf-RMv">
@@ -324,7 +324,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrE-iB-qCC">
-                                <rect key="frame" x="94" y="190" width="50" height="50"/>
+                                <rect key="frame" x="90" y="190" width="50" height="50"/>
                                 <state key="normal" image="phone"/>
                                 <connections>
                                     <action selector="callButtonPressed:" destination="wCT-WA-mjL" eventType="touchUpInside" id="dNU-Ef-DYA"/>
@@ -338,38 +338,38 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-aK-o4F">
-                                <rect key="frame" x="230" y="190" width="50" height="50"/>
+                                <rect key="frame" x="234" y="190" width="50" height="50"/>
                                 <state key="normal" image="add"/>
                                 <connections>
                                     <action selector="facebookButtonPressed:" destination="wCT-WA-mjL" eventType="touchUpInside" id="SKn-TV-4oV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-cp-oda">
-                                <rect key="frame" x="19" y="51" width="337" height="21"/>
+                                <rect key="frame" x="20" y="49" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kb-gO-mKO">
-                                <rect key="frame" x="19" y="80" width="335" height="21"/>
+                                <rect key="frame" x="20" y="78" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19M-HB-w1W">
-                                <rect key="frame" x="19" y="109" width="335" height="21"/>
+                                <rect key="frame" x="20" y="107" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pE9-hP-wD7">
-                                <rect key="frame" x="19" y="138" width="335" height="21"/>
+                                <rect key="frame" x="20" y="136" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Street" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFv-Lq-9SZ">
-                                <rect key="frame" x="20" y="22" width="334" height="21"/>
+                                <rect key="frame" x="20" y="20" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -405,7 +405,7 @@
                                 <rect key="frame" x="20" y="8" width="335" height="244"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -428,7 +428,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BPA-Ud-V7p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iqn-CY-0zI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-oc-7UA">
@@ -499,11 +499,11 @@
             </objects>
             <point key="canvasLocation" x="969.5" y="387.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Cities-->
         <scene sceneID="Qjn-ND-CIh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RaF-Uz-1gO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="ezk-tm-heI"/>
+                    <tabBarItem key="tabBarItem" title="Cities" image="Group of People" id="ezk-tm-heI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Y30-mV-3vX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -823,11 +823,11 @@
             </objects>
             <point key="canvasLocation" x="1974.5" y="2005.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="94O-iF-1Dr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7O1-ZW-81Q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="P3O-bT-lLX"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="P3O-bT-lLX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="S4d-hV-omd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -912,11 +912,11 @@
             </objects>
             <point key="canvasLocation" x="1974.5" y="1231.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Info-->
         <scene sceneID="Z3W-2I-x9T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rFV-bi-ocm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Wk5-RW-W7s"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="Gear" id="Wk5-RW-W7s"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="GBh-TB-Q15">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -939,6 +939,10 @@
     </scenes>
     <resources>
         <image name="Close Icon" width="28" height="29"/>
+        <image name="Gear" width="25" height="25"/>
+        <image name="Group of People" width="25" height="22"/>
+        <image name="Home" width="25" height="20"/>
+        <image name="Search" width="25" height="24"/>
         <image name="add" width="96" height="96"/>
         <image name="logo" width="260" height="64"/>
         <image name="message" width="96" height="96"/>
