@@ -94,15 +94,3 @@ extension ContactViewController: MFMailComposeViewControllerDelegate {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }
-
-extension UIApplication {
-    class func tryURL(urls: [String]) {
-        let application = UIApplication.sharedApplication()
-        for url in urls {
-            if application.canOpenURL(NSURL(string: url)!) {
-                application.openURL(NSURL(string: url)!)
-                return
-            }
-        }
-    }
-}

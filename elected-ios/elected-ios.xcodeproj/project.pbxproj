@@ -36,6 +36,7 @@
 		D047BA641CA98A5C0029550F /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA631CA98A5C0029550F /* SearchTableViewController.swift */; };
 		D047BA671CA98EC30029550F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047BA661CA98EC30029550F /* StringExtension.swift */; };
 		D0578CC21CAC305A002C7B39 /* StaffMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0578CC11CAC305A002C7B39 /* StaffMember.swift */; };
+		D0578CC41CACAC45002C7B39 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0578CC31CACAC45002C7B39 /* UIApplicationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		D047BA631CA98A5C0029550F /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		D047BA661CA98EC30029550F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		D0578CC11CAC305A002C7B39 /* StaffMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffMember.swift; sourceTree = "<group>"; };
+		D0578CC31CACAC45002C7B39 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			children = (
 				D047BA531CA4B44A0029550F /* UIImageViewExtension.swift */,
 				D047BA661CA98EC30029550F /* StringExtension.swift */,
+				D0578CC31CACAC45002C7B39 /* UIApplicationExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			files = (
 				9D49B95E1CAA305100F8900B /* DeveloperViewController.swift in Sources */,
 				D047BA481CA485090029550F /* ProfileViewController.swift in Sources */,
+				D0578CC41CACAC45002C7B39 /* UIApplicationExtension.swift in Sources */,
 				D047BA601CA5C0BC0029550F /* ContactViewController.swift in Sources */,
 				D047BA5C1CA5A7070029550F /* TeamViewController.swift in Sources */,
 				D047BA581CA596AF0029550F /* OfficialTableViewCell.swift in Sources */,

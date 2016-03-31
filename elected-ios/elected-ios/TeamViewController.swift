@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class TeamViewController: UIViewController {
 
@@ -39,6 +40,23 @@ class TeamViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    func configuredMailComposeViewController(staff: String) -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+
+        mailComposerVC.setToRecipients([(staff)])
+        mailComposerVC.setSubject("Subject...")
+        mailComposerVC.setMessageBody("Issue!", isHTML: false)
+
+        return mailComposerVC
+    }
+
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+
+
 }
 
 extension TeamViewController: UITableViewDataSource, UITableViewDelegate {
@@ -66,5 +84,19 @@ extension TeamViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+        let mailComposeViewController = configuredMailComposeViewController(members[indexPath.row].email)
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
+}
+
+extension TeamViewController: MFMailComposeViewControllerDelegate {
+
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }
