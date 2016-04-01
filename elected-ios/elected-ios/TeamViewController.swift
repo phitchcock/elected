@@ -29,8 +29,6 @@ class TeamViewController: UIViewController {
                 }
                 else {
                     members = staff
-                    print(official.staffMembers!.count)
-
                 }
             }
         }
@@ -98,7 +96,7 @@ extension TeamViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension TeamViewController: MFMailComposeViewControllerDelegate {
 
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

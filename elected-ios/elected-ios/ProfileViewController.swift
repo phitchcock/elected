@@ -37,7 +37,6 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(animated)
 
         if let official = official {
-            print(official)
             nameLabel.text = official.name
             titleLabel.text = official.title
             imageView.imageFromUrl(official.image)//UIImage(named: (official.image))

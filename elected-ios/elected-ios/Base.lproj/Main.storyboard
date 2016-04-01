@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PZ0-at-J2V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PZ0-at-J2V">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -18,23 +18,43 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Facebook2" translatesAutoresizingMaskIntoConstraints="NO" id="9hf-W3-1EG">
-                                <rect key="frame" x="99" y="182" width="177" height="110"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook2" translatesAutoresizingMaskIntoConstraints="NO" id="9hf-W3-1EG">
+                                <rect key="frame" x="99" y="159" width="177" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="cYg-Fn-9bv"/>
+                                    <constraint firstAttribute="width" constant="177" id="dqR-1N-sR5"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elected Officials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDZ-Mt-0Px">
-                                <rect key="frame" x="63" y="102" width="248" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elected Officials" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDZ-Mt-0Px">
+                                <rect key="frame" x="81" y="72" width="212" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="DGT-UZ-J8k"/>
+                                    <constraint firstAttribute="height" constant="39" id="P8W-4g-ddU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                 <color key="textColor" red="0.094117647060000004" green="0.19215686269999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search for local elected officials within Sacramento County and the seven incorporated cities located in the county." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxl-EE-qIU">
-                                <rect key="frame" x="35" y="333" width="304" height="119"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for local elected officials within Sacramento County and the seven incorporated cities located in the county." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxl-EE-qIU">
+                                <rect key="frame" x="35" y="318" width="304" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="647-np-RYU"/>
+                                    <constraint firstAttribute="height" constant="119" id="uWR-xh-smG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                 <color key="textColor" red="0.094117647060000004" green="0.19215686269999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9hf-W3-1EG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="30q-Rc-byD"/>
+                            <constraint firstItem="dxl-EE-qIU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4B6-fM-BKF"/>
+                            <constraint firstItem="dxl-EE-qIU" firstAttribute="top" secondItem="9hf-W3-1EG" secondAttribute="bottom" constant="49" id="IG1-Ir-8sS"/>
+                            <constraint firstItem="VDZ-Mt-0Px" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="MIH-tx-Cll"/>
+                            <constraint firstItem="VDZ-Mt-0Px" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VfR-BU-RZC"/>
+                            <constraint firstItem="9hf-W3-1EG" firstAttribute="top" secondItem="VDZ-Mt-0Px" secondAttribute="bottom" constant="48" id="jw0-cQ-Y0b"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Elected Officials" id="DIi-kH-kCF">
                         <barButtonItem key="backBarButtonItem" title=" " id="pCT-3y-8eA"/>
@@ -111,7 +131,7 @@
                                 <connections>
                                     <outlet property="cellImageView" destination="Jyn-0P-K83" id="b9a-cB-Slq"/>
                                     <outlet property="nameLabel" destination="j9Q-c7-Xbu" id="oCd-Yd-MMw"/>
-                                    <segue destination="c2L-qk-Scw" kind="push" identifier="officialsSegue" id="gvi-mW-63M"/>
+                                    <segue destination="c2L-qk-Scw" kind="show" identifier="officialsSegue" id="gvi-mW-63M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -149,7 +169,6 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gZc-oc-2BP">
                                             <rect key="frame" x="8" y="12" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="75" id="Baj-qQ-6N4"/>
                                                 <constraint firstAttribute="width" constant="75" id="kAb-rX-0rC"/>
                                             </constraints>
                                         </imageView>
@@ -170,6 +189,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="sR7-Iv-XDo" firstAttribute="leading" secondItem="gZc-oc-2BP" secondAttribute="trailing" constant="8" id="56h-8Q-Oh9"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="gZc-oc-2BP" secondAttribute="bottom" constant="4" id="5X0-TB-FT2"/>
                                         <constraint firstItem="sR7-Iv-XDo" firstAttribute="bottom" secondItem="J9D-8S-w8c" secondAttribute="bottomMargin" constant="-13" id="AF4-UU-HGG"/>
                                         <constraint firstItem="gZc-oc-2BP" firstAttribute="top" secondItem="J9D-8S-w8c" secondAttribute="topMargin" constant="4" id="ESS-dL-8hj"/>
@@ -177,7 +197,6 @@
                                         <constraint firstItem="AV6-4S-KTo" firstAttribute="top" secondItem="J9D-8S-w8c" secondAttribute="topMargin" constant="13" id="PjE-O6-Qu3"/>
                                         <constraint firstItem="AV6-4S-KTo" firstAttribute="leading" secondItem="gZc-oc-2BP" secondAttribute="trailing" constant="8" id="V20-HO-CMj"/>
                                         <constraint firstItem="gZc-oc-2BP" firstAttribute="leading" secondItem="J9D-8S-w8c" secondAttribute="leadingMargin" id="daa-YB-5HE"/>
-                                        <constraint firstItem="sR7-Iv-XDo" firstAttribute="leading" secondItem="gZc-oc-2BP" secondAttribute="trailing" constant="8" id="mAe-n0-ueA"/>
                                         <constraint firstItem="sR7-Iv-XDo" firstAttribute="top" secondItem="AV6-4S-KTo" secondAttribute="bottom" constant="-4" id="opW-XC-HoS"/>
                                         <constraint firstItem="sR7-Iv-XDo" firstAttribute="trailing" secondItem="J9D-8S-w8c" secondAttribute="trailingMargin" constant="-33" id="zrN-cd-sM3"/>
                                     </constraints>

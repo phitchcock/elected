@@ -11,6 +11,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>HanekeSwift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>16FB872D0D2D4BA0F378AB34D47CF95F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2C2B1953A91633859BF7AD238FF567A0</key>
 		<dict>
 			<key>primary</key>
@@ -58,7 +68,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B9375DA23EE183040DFA9B550837594F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C05933E6E34EA8F892BCF94154DEFF8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F408A1E3412E3D563AC66C403A78EF1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

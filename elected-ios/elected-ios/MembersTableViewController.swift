@@ -55,7 +55,6 @@ class MembersTableViewController: UITableViewController {
 
                 if let JSON = response.result.value {
 
-                    //print(JSON)
                     self.officials.removeAll()
 
                     let dict = JSON
@@ -157,10 +156,6 @@ class MembersTableViewController: UITableViewController {
                             title = "ERROR"
                         }
 
-                        if let staffJson = a["staff_members"] {
-                            print(staffJson)
-                        }
-
                         let official = Official(name: name, image: image, cityId: cityId, bio: bio, street: street, cityCode: cityCode, state: state, zip: zip, phone: phone, email: email, fax: fax, title: title)
 
                         if fb != nil {
@@ -169,7 +164,7 @@ class MembersTableViewController: UITableViewController {
 
                         if let staffJson = a["staff_members"] {
 
-                            var dict = staffJson as! [AnyObject]
+                            let dict = staffJson as! [AnyObject]
 
                             for o in dict {
                                 var name1 = String()
@@ -191,8 +186,7 @@ class MembersTableViewController: UITableViewController {
                                 let staffMember = StaffMember(name: name1, email: email1, title: title1)
 
                                 official.staffMembers = staffMembers
-                                print(staffMembers.count)
-                                print(official.staffMembers)
+
                                 staffMembers.append(staffMember)
                             }
 
@@ -222,7 +216,6 @@ class MembersTableViewController: UITableViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let official = officials[row]
                 dvc.official = official
-                print(official.staffMembers?.count)
             }
         }
         

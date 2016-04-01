@@ -176,7 +176,7 @@ class SearchTableViewController: UITableViewController {
 
                         if let staffJson = a["staff_members"] {
 
-                            var dict = staffJson as! [AnyObject]
+                            let dict = staffJson as! [AnyObject]
 
                             staffMembers.removeAll()
 
@@ -223,7 +223,6 @@ class SearchTableViewController: UITableViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let official = officials[row]
                 dvc.official = official
-                print(official.staffMembers?.count)
             }
         }
     }
@@ -279,7 +278,7 @@ extension SearchTableViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDeleg
     }
 
     func imageAnimationForEmptyDataSet(scrollView: UIScrollView!) -> CAAnimation! {
-        var animation = CABasicAnimation(keyPath: "transform")
+        let animation = CABasicAnimation(keyPath: "transform")
         animation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
         animation.toValue = NSValue(CATransform3D: CATransform3DMakeRotation(CGFloat(M_PI_2), 0.0, 0.0, 1.0))
 
