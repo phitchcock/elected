@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Haneke
+import DZNEmptyDataSet
 
 class SearchTableViewController: UITableViewController {
 
@@ -19,6 +20,8 @@ class SearchTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
         tableView.rowHeight = 100
         tableView.tableFooterView = UIView()
 
@@ -38,7 +41,6 @@ class SearchTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return officials.count
     }
@@ -241,7 +243,7 @@ extension SearchTableViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchActive = false
         searchBar.resignFirstResponder()
-        searchBar.placeholder = ""
+        searchBar.placeholder = "Search"
         searchBar.text = ""
         officials.removeAll()
         tableView.reloadData()
@@ -263,4 +265,39 @@ extension SearchTableViewController: UISearchBarDelegate {
         }
         self.tableView.reloadData()
     }
+}
+
+extension SearchTableViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "Search")
+    }
+
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = "Search Officials"
+        return NSAttributedString(string: text)
+    }
+
+    func imageAnimationForEmptyDataSet(scrollView: UIScrollView!) -> CAAnimation! {
+        var animation = CABasicAnimation(keyPath: "transform")
+        animation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
+        animation.toValue = NSValue(CATransform3D: CATransform3DMakeRotation(CGFloat(M_PI_2), 0.0, 0.0, 1.0))
+
+        animation.duration = 0.25
+        animation.cumulative = true
+        animation.repeatCount = 1
+
+        return animation
+    }
+
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = "Search for local elected officials within Sacramento County and the seven incorporated cities located in the county."
+        return NSAttributedString(string: text)
+    }
+
+    /*
+    func backgroundColorForEmptyDataSet(scrollView: UIScrollView!) -> UIColor! {
+        return UIColor(red: 19/255, green: 36/255, blue: 58/255, alpha: 1.0)
+    }
+    */
 }

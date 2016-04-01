@@ -45,8 +45,8 @@ class TeamViewController: UIViewController {
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
 
         mailComposerVC.setToRecipients([(staff)])
-        mailComposerVC.setSubject("Subject...")
-        mailComposerVC.setMessageBody("Issue!", isHTML: false)
+        //mailComposerVC.setSubject("Subject...")
+        //mailComposerVC.setMessageBody("Issue!", isHTML: false)
 
         return mailComposerVC
     }
