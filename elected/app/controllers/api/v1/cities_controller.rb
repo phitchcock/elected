@@ -1,4 +1,5 @@
 class Api::V1::CitiesController < ApplicationController
+
   def index
     @cities = City.all
   end
@@ -6,4 +7,5 @@ class Api::V1::CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
   end
+
 end
