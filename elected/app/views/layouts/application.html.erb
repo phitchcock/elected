@@ -8,8 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="page-container">
+  <%= render 'layouts/nav' %>
+  <%= yield %>
+</div>
 </body>
 </html>
