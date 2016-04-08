@@ -2,6 +2,11 @@ class Official < ActiveRecord::Base
   belongs_to :city
   has_many :staff_members
 
+
+  validates :name, :image, :bio, :street, :city_code, :state,
+            :zip, :phone, :fax, :email, :facebook, :title, presence: true
+
+
   filterrific(
     default_filter_params: { sorted_by: 'created_at_desc' },
     available_filters: [
