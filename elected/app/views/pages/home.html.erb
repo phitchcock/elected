@@ -1,8 +1,3 @@
-<!-- Main container -->
-
-
-<!-- Navigation Bloc END -->
-<%#= render 'layouts/nav' %>
 <!-- Bloc Group -->
 <div class='bloc-group'>
 
@@ -11,7 +6,7 @@
   <div class="container bloc-lg">
     <div class="row">
       <div class="col-sm-12">
-        <%= image_tag("Screenshot-2.png", class: "center-block animated fadeInLeft", height: "600") %>
+        <%= image_tag('s2.png', class: "img-responsive pull-right animated fadeInLeft") %>
       </div>
     </div>
   </div>
@@ -23,13 +18,15 @@
   <div class="container bloc-lg">
     <div class="row voffset-lg">
       <div class="col-sm-12">
-        <h1 class="mg-md animated fadeInDown">
-          Connect with your Sacramento County
-          Elected Official
+        <h1 class="animated fadeInDown mg-clear">
+          Connect with Local Elected
         </h1>
-        <h4 class="animated fadeInDown">
-          Search for local elected officials within Sacramento County and the seven incorporated cities located in the county.
-        </h4><a href="https://itunes.apple.com/us/app/sacramento-elected-officials/id1097685110?mt=8" class="btn   btn-lg animated fadeInDown btn-splashed-white">DOWNLOAD</a>
+        <h1 class="animated fadeInDown mg-clear">
+          Officials in Sacramento County!
+        </h1>
+        <h4 class="mg-md animated fadeInDown mg-clear">
+          Search for local elected officials within Sacramento County and the seven incorporated cities located in the county. Connect with them through email, phone or their facebook page.
+        </h4><a href="index.html" class="btn   btn-lg animated fadeInDown btn-splashed-white">GET THE APP</a>
       </div>
     </div>
   </div>
@@ -55,48 +52,48 @@
     </div>
     <div class="row voffset">
       <div class="col-sm-4">
-        <span class="fa fa-star icon-round icon-md pull-right animated fadeInLeft"></span>
+        <span class="fa fa-group icon-round icon-md pull-right animated fadeInLeft"></span>
         <h3 class="text-right mg-sm animated fadeInLeft">
-          Heading content
+          Search by City
         </h3>
         <p class="text-right mg-lg animated fadeInLeft">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-        </p><span class="fa fa-star icon-round icon-md pull-right animated fadeInLeft animDelay02"></span>
+          Officials are gropped by city. Scroll through all officials located in the city.
+        </p><span class="fa fa-user icon-round icon-md pull-right animated fadeInLeft animDelay02"></span>
         <h3 class="text-right mg-sm animated fadeInLeft animDelay02">
-          Heading content
+          Search by Official
         </h3>
         <p class="text-right animated fadeInLeft animDelay02 mg-lg">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-        </p><span class="fa fa-star icon-round icon-md pull-right animated fadeInLeft animDelay04"></span>
+          Search for any elected official in the County Database.
+        </p><span class="fa fa-paper-plane-o icon-round icon-md pull-right animated fadeInLeft animDelay04"></span>
         <h3 class="text-right mg-sm animated fadeInLeft animDelay04">
-          Heading content
+          Email Staff
         </h3>
         <p class="text-right mg-lg animated fadeInLeft animDelay04">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+          All of the officials staff members are listed to contact by email.
         </p>
       </div>
       <div class="col-sm-4">
-        <%= image_tag("Screenshot-4.png", class: "img-responsive center-block") %>
+        <%= image_tag('s4.png', class: "img-responsive center-block") %>
       </div>
       <div class="col-sm-4">
-        <span class="fa fa-star icon-round icon-md pull-left animated fadeInRight"></span>
+        <span class="fa fa-phone icon-round icon-md pull-left animated fadeInRight"></span>
         <h3 class="mg-sm animated fadeInRight">
-          Heading content
+          Call
         </h3>
         <p class="mg-lg animated fadeInRight">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-        </p><span class="fa fa-star icon-round icon-md pull-left animated fadeInRight animDelay02"></span>
+          Tap on the call button to instantly call your official.
+        </p><span class="fa fa-envelope-o icon-round icon-md pull-left animated fadeInRight animDelay02"></span>
         <h3 class="mg-sm animated fadeInRight animDelay02">
-          Heading content
+          Email
         </h3>
         <p class="mg-lg animated fadeInRight animDelay02">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-        </p><span class="fa fa-star icon-round icon-md pull-left animated fadeInRight animDelay04"></span>
+          Tap on the email button to send an email to your elected official.
+        </p><span class="fa fa-facebook icon-round icon-md pull-left animated fadeInRight animDelay04"></span>
         <h3 class="mg-sm animated fadeInRight animDelay04">
-          Heading content
+          Facebook
         </h3>
         <p class="mg-lg animated fadeInRight animDelay04">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+          Connect with the official through their facebook page.
         </p>
       </div>
     </div>
@@ -114,7 +111,7 @@
         </h3>
       </div>
       <div class="col-sm-2">
-        <a href="https://itunes.apple.com/us/app/sacramento-elected-officials/id1097685110?mt=8" class="btn   btn-lg btn-indigo-dye">Download</a>
+        <a href="https://itunes.apple.com/us/app/sacramento-elected-officials/id1097685110?mt=8", class="btn   btn-lg btn-indigo-dye">Download</a>
       </div>
     </div>
   </div>
@@ -129,9 +126,13 @@
         <h3 class="mg-md text-center text-w-md">
           Sacramento Elected Officials
         </h3>
-        <p class="text-center mg-lg text-w-lg">
-          Copyright 2016 - www.sacramentocounty.online
-        </p>
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="text-center mg-lg text-w-lg">
+              Copyright 2016 - www.sacramentocounty.online
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -139,4 +140,3 @@
 <!-- Footer - bloc-5 END -->
 </div>
 <!-- Main container END -->
-

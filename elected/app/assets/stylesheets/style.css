@@ -19,11 +19,8 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
    
 
 
-
-
 /* Globals type styling */
-   
- h1, h2, h3, h4, h5, h6, p, label, .btn, a{
+    h1, h2, h3, h4, h5, h6, p, label, .btn, a{
 	font-family:"Helvetica";
 }
 
@@ -302,6 +299,9 @@ nav .caret{
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-clear{
+	margin:0;
+}
 .mg-sm{
 	margin-top:10px;
 	margin-bottom:5px;
@@ -451,16 +451,16 @@ iframe{
 /* Bloc image backgrounds */
 
 .bg-city{
-	background-image:url('img/city.jpg');
+	background-image:url("img/city.jpg");
 }
 .bg-forrest{
-	background-image:url('img/forrest.jpg');
+	background-image:url("img/forrest.jpg");
 }
 .bg-sac{
-	background-image:url('img/sac.jpg');
+	background-image:url("img/sac.jpg");
 }
 .bg-iphone-emergency-call{
-	background-image:url('img/iphone-emergency-call.jpg');
+	background-image:url("img/iphone-emergency-call.jpg");
 }
 
 
